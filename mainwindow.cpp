@@ -14,7 +14,7 @@ MainWindow::MainWindow(QWidget *parent) :
     helpMenu->addAction(aboutAction);
     setCentralWidget(cw);
     menuBar()->addMenu(helpMenu);
-    statusBar()->showMessage("欢迎使用环保图灵机！");
+    statusBar()->showMessage(tr("欢迎使用图灵机!"));
     connect(cw, CentralWidget::setStatus, this,[this](QString message)
     {
         statusBar()->showMessage(message, 0);
@@ -31,7 +31,7 @@ void MainWindow::showAbout()
 {
     QMessageBox *aboutWindow = new QMessageBox(this);
    aboutWindow->setStandardButtons(QMessageBox::Ok);
-   aboutWindow->setText(tr("<h1>TuringMachine</h1>"
+   aboutWindow->setText(tr("<h2>TuringMachine</h2>"
                             "<p>Based on Qt 5.10.1 (MinGW 5.3.0, 32bit)</p>"
                             "Source Code: <a href=\"https://github.com/c-my/TuringMachine\">https://github.com/c-my/TuringMachine</a><br/>"
                            "Email: "
