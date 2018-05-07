@@ -12,6 +12,7 @@
 #include <QGraphicsView>
 #include <QListWidget>
 #include <QTimer>
+#include <QMessageBox>
 #include "turingmachine.h"
 #include "papertape.h"
 

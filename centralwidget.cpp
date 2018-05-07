@@ -105,7 +105,8 @@ void CentralWidget::importJson()
         return;
     if(!machine->setGrammar(filename))
     {
-        setStatus("请检查文件格式");
+        QMessageBox::warning(this, "警告", "请检查文件格式");
+        setStatus("导入失败");
         return;
     };
     setStatus(tr("导入成功"));
